@@ -1,0 +1,6 @@
+# This code is used to map WGBS data;
+
+bsmap -a R1_001.fastq.gz -b R2_001.fastq.gz -d TAIR10_chr_all_raname.fasta -o S2_L002.bam -p 8 -w 1 -n 1 -v 2
+samtools sort S2_L002.bam -o S2_L002.sorted.bam
+samtools rmdup -s S2_L002.sorted.bam S2_L002.sorted.rmdup.bam
+python bsmap-2.90/methratio_alt_wl.py --Steve -d TAIR10_chr_all_raname.fasta --out S2_L002_methylation_out.txt -z -u S2_L002.sorted.rmdup.bam -s bsmap-2.90/samtools
