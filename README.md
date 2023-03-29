@@ -11,11 +11,11 @@ ATAC-seq read adaptors were removed using trim_galore. The reads were then mappe
 
 RNA-seq analysis
 
-Cleaned short reads were aligned to the reference genome, TAIR10, by Bowtie2 (v2.1.0). Expression abundance was then calculated by RSEM using the default parameters [37]. Heatmaps were visualized using the R package pheatmap. Differential expression analysis was conducted using edgeR  [35]. A threshold of p-value < 0.05 and Fold Change > 2 were used to decide whether there were any significant differences in expression between samples. 
+Cleaned short reads were aligned to the reference genome, TAIR10, by Bowtie2 (v2.1.0). Expression abundance was then calculated by RSEM using the default parameters. Heatmaps were visualized using the R package pheatmap. Differential expression analysis was conducted using edgeR. A threshold of p-value < 0.05 and Fold Change > 2 were used to decide whether there were any significant differences in expression between samples. 
 
 ChIP-seq analysis
 
-ChIP-seq data was aligned to the TAIR10 reference genome with Bowtie2 (v2.1.0), only including uniquely mapped reads without any mismatches. Duplicated reads were removed by Samtools. ChIP-seq peaks were called by MACS2 (v2.1.1) and annotated using ChIPseeker [36]. Differential peaks were called by the bdgdiff function in MACS2 [38]. ChIP-seq data metaplots were plotted by deeptools (v2.5.1). Correlation of MORC7 with ChIP-seq data was conducted with ChromHMM. H3K9ac, H3K27ac, H4K16ac, H3K4me1, H3K4me3, H3K36me2, H3K36me3, H3K9me2, H3K27me3, Pol II, and Pol V, as published previously, were included in this analysis (Additional file 6: Table S5). Motif enrichment analysis was performed with MEME (v5.0.5).
+ChIP-seq data was aligned to the TAIR10 reference genome with Bowtie2 (v2.1.0), only including uniquely mapped reads without any mismatches. Duplicated reads were removed by Samtools. ChIP-seq peaks were called by MACS2 (v2.1.1) and annotated using ChIPseeker [36]. Differential peaks were called by the bdgdiff function in MACS2 . ChIP-seq data metaplots were plotted by deeptools (v2.5.1). Correlation of MORC7 with ChIP-seq data was conducted with ChromHMM. H3K9ac, H3K27ac, H4K16ac, H3K4me1, H3K4me3, H3K36me2, H3K36me3, H3K9me2, H3K27me3, Pol II, and Pol V, as published previously, were included in this analysis (Additional file 6: Table S5). Motif enrichment analysis was performed with MEME (v5.0.5).
 
 Whole-genome bisulfite sequencing (BS-seq) analysis
 
